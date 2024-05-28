@@ -1,5 +1,5 @@
 import {Sidebar} from "./components/Sidebar.tsx";
-import {Route, RouterProvider, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import React from "react";
 import {HomePage} from "./pages/home-page.tsx";
 import {ProfilePage} from "./pages/profile-page.tsx";
