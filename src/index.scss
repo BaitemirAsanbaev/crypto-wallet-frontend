@@ -14,21 +14,32 @@
 }
 
 body {
-  background-color: $dark-grey !important;
+  background-color: $dark-grey;
   color: #fff;
 }
 
 .App {
   height: 100vh;
   display: flex;
-
+  .cont{
+    background-color: $dark-grey;
+  }
   .sider {
     background: linear-gradient($grey, $dark-grey);
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
   }
 
   .not-sider {
     background-color: $dark-grey;
+    margin-left: 320px;
+    transition: .1s ease-in-out;
   }
+
 
   .header {
     background: $grey;
@@ -38,5 +49,12 @@ body {
 
   .content {
     background: $dark-grey;
+  }
+}
+@media (max-width:767px) {
+  .App{
+    .not-sider{
+      margin-left: 60px;
+    }
   }
 }

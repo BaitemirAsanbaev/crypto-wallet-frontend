@@ -7,14 +7,15 @@ import {NotFoundPage} from "./pages/not-found-page.tsx";
 import {Layout} from "antd";
 import {Content, Header} from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
+
 export const App = () => {
 
     return <div className='App'>
-        <Layout hasSider>
-            <Sider className='sider' width={'320px'}>
+        <Layout hasSider className='cont'>
+            <Sider className='sider' width='320px' breakpoint='md' collapsedWidth={'60px'}>
                 <Sidebar/>
             </Sider>
-            <Layout  className='not-sider'>
+            <Layout className='not-sider'>
                 <Header className='header'>Header</Header>
                 <Content className='content'>
                     <Routes>
