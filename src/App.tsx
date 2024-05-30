@@ -1,17 +1,30 @@
-import {Sidebar} from "./components/Sidebar.tsx";
+import {Sidebar} from "./components/Sidebar/Sidebar.tsx";
 import {Route, Routes} from "react-router-dom";
 import React from "react";
 import {HomePage} from "./pages/home-page.tsx";
 import {ProfilePage} from "./pages/profile-page.tsx";
 import {NotFoundPage} from "./pages/not-found-page.tsx";
-
+import {Layout} from "antd";
+import {Content, Header} from "antd/es/layout/layout";
+import Sider from "antd/es/layout/Sider";
 export const App = () => {
-    return <>
-        <Sidebar/>
-        <Routes>
-            <Route index path={'/'} element={<HomePage/>}/>
-            <Route path={'/profile'} element={<ProfilePage/>}/>
-            <Route path={'*'} element={<NotFoundPage/>}/>
-        </Routes>
-    </>
+
+    return <div className='App'>
+        <Layout hasSider>
+            <Sider className='sider' width={'320px'}>
+                <Sidebar/>
+            </Sider>
+            <Layout  className='not-sider'>
+                <Header className='header'>Header</Header>
+                <Content className='content'>
+                    <Routes>
+                        <Route index path={'/'} element={<HomePage/>}/>
+                        <Route path={'/profile'} element={<ProfilePage/>}/>
+                        <Route path={'*'} element={<NotFoundPage/>}/>
+                    </Routes>
+                </Content>
+            </Layout>
+        </Layout>
+
+    </div>
 }
