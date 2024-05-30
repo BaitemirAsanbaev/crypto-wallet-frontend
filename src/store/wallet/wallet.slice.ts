@@ -7,11 +7,11 @@ interface WalletState{
 const initialState:WalletState = {
     wallet:{
         id: 1,
-        usd: 0,
-        btc: 0,
-        eth: 0,
-        bnb: 0,
-        doge: 0,
+        usd: 10000,
+        btc: 2.43,
+        eth: 2.11,
+        bnb: 3.55,
+        doge: 53.43,
         user_id: 0,
         createdAt: 'string',
         updatedAt: 'string'

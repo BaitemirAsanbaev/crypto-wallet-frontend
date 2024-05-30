@@ -7,6 +7,7 @@ import {NotFoundPage} from "./pages/not-found-page.tsx";
 import {Layout} from "antd";
 import {Content, Header} from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
+import {WalletView} from "./components/WalletView/WalletView.tsx";
 
 export const App = () => {
 
@@ -16,7 +17,7 @@ export const App = () => {
                 <Sidebar/>
             </Sider>
             <Layout className='not-sider'>
-                <Header className='header'>Header</Header>
+                <Header className='header'><WalletView/></Header>
                 <Content className='content'>
                     <Routes>
                         <Route index path={'/'} element={<HomePage/>}/>
