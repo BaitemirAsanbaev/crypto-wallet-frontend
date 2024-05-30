@@ -13,6 +13,8 @@
   }
   .dropdown{
     cursor: pointer;
+    transition: .5s;
+    transform-origin: center;
   }
 }
 
