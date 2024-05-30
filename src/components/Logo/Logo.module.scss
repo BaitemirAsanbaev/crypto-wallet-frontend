@@ -1,0 +1,9 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/fonts";
+
+.Logo{
+  color: $yellow;
+  @include jua;
+  font-size: 32px;
+  text-align: center;
+}

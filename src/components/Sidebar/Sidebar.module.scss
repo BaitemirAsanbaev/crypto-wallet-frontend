@@ -1,6 +1,29 @@
 @import '../../styles/variables/colors';
 .Sidebar{
+  padding: 20px ;
   display: flex;
   flex-direction: column;
+  a{
+    img{
+      margin-right: 20px;
+      transition: .5s ease-in-out;
+    }
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+}
 
+@media (max-width: 768px) {
+  .Sidebar{
+    a{
+      img{
+        width: 20px;
+      }
+      span{
+        display: none;
+      }
+    }
+  }
 }
