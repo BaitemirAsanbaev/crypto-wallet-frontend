@@ -2,7 +2,7 @@
 
 .WalletDropdown{
   position: absolute;
-  top: 100px;
+  top: 120px;
   right: 0;
   background-color: $grey;
   border-radius:30px;
@@ -12,5 +12,6 @@
   >div{
     display: flex;
     align-items: center;
+    margin: 10px 0;
   }
 }

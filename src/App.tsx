@@ -17,7 +17,7 @@ export const App = () => {
                 <Sidebar/>
             </Sider>
             <Layout className='not-sider'>
-                <Header className='header'><WalletView/></Header>
+                <div className='header'><WalletView/></div>
                 <Content className='content'>
                     <Routes>
                         <Route index path={'/'} element={<HomePage/>}/>
