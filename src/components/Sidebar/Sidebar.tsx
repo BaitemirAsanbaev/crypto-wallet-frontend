@@ -14,7 +14,7 @@ import {Logo} from "../Logo/Logo.tsx";
 
 export const Sidebar = () => {
     return <nav className={classes.Sidebar}>
-        <Logo/>
+        <Logo full={false}/>
         <Link to={'/'}><img src={home} alt='home link'/> <span>Home</span></Link>
         <Link to={'/swap'}><img src={swap} alt='swap link'/> <span>Swap</span></Link>
         <Link to={'/chat'}><img src={chat} alt='chat link'/> <span>Chat</span></Link>

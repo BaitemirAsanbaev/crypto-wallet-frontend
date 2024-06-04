@@ -1,0 +1,21 @@
+@import "src/styles/variables/colors";
+
+.Login{
+  input, span{
+    background-color: $grey;
+    border: none;
+    &:active, &:focus, &:hover, &:focus-within{
+      background-color: $dark-grey;
+    }
+  }
+  button{
+    background: $yellow;
+    color: $dark-grey;
+    &:hover{
+      filter: brightness(.7);
+    }
+  }
+  a{
+    color:$yellow;
+  }
+}

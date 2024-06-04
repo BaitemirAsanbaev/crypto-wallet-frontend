@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import classes from './Logo.module.scss';
-
-export const Logo: React.FC = () => {
+interface LogoProps{
+    full:boolean
+}
+export const Logo: React.FC<LogoProps> = ({full = false}) => {
     const [isWideScreen, setIsWideScreen] = useState<boolean>(window.innerWidth > 767);
 
     useEffect(() => {
@@ -14,11 +16,11 @@ export const Logo: React.FC = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []); // Empty dependency array ensures this effect runs only once after initial render
+    }, []);
 
     return (
         <div className={classes.Logo}>
-            {isWideScreen ? (
+            {isWideScreen||full ? (
                 <>
                     CRYPTO<br />
                     WALLET
