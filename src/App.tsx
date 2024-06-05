@@ -1,6 +1,5 @@
 import {Sidebar} from "./components/Sidebar/Sidebar.tsx";
 import {Navigate, Route, Routes} from "react-router-dom";
-import React from "react";
 import {HomePage} from "./pages/home-page.tsx";
 import {ProfilePage} from "./pages/profile-page.tsx";
 import {NotFoundPage} from "./pages/not-found-page.tsx";
@@ -13,7 +12,7 @@ import {useWalletSelector} from "./hooks/redux.ts";
 
 export const App = () => {
 
-    const {isAuthed, token} = useWalletSelector(state => state.auth)
+    const {isAuthed} = useWalletSelector(state => state.auth)
 
     return <div className='App'>
         <Layout hasSider className='cont'>
@@ -38,8 +37,7 @@ export const App = () => {
                 </>
                 : <Routes>
                     <Route path={'*'} element={<Navigate to={'/login'}/>}/>
-                    <Route path={'/:path'} element={<AuthPage/>}/>
-                    <Route path={'/:path'} element={<AuthPage/>}/>
+                    <Route path={'/login'} element={<AuthPage/>}/>
                 </Routes>
             }
         </Layout>

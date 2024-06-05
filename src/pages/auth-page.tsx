@@ -1,14 +1,10 @@
 import {AuthBox} from "../components/AuthBox/AuthBox.tsx";
-import {Login} from "../components/Login/Login.tsx";
-import {useParams} from "react-router-dom";
-import {Register} from "../components/Register/Register.tsx";
+import {AuthForm} from "../components/AuthForm/AuthForm.tsx";
 
-export const AuthPage = ()=>{
-    const params = useParams();
-    return<div className='page'>
-      <AuthBox>
-          {params.path==='login'&&<Login/>}
-          {params.path==='register'&&<Register/>}
-      </AuthBox>
+export const AuthPage = () => {
+    return <div className='page'>
+        <AuthBox>
+            <AuthForm/>
+        </AuthBox>
     </div>
 }

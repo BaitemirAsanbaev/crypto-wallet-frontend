@@ -1,6 +1,16 @@
 @import "src/styles/variables/colors";
 
 .Login{
+  input[type='file']{
+    display:none;
+  }
+  img{
+    cursor: pointer;
+    transition: .1s ;
+    &:hover{
+      filter: brightness(.8);
+    }
+  }
   input, span{
     background-color: $grey;
     border: none;
@@ -8,12 +18,15 @@
       background-color: $dark-grey;
     }
   }
-  button{
+  div>button{
     background: $yellow;
     color: $dark-grey;
     &:hover{
       filter: brightness(.7);
     }
+  }
+  button{
+    color: $yellow;
   }
   a{
     color:$yellow;
